@@ -1,0 +1,100 @@
+/* Estilos generales y reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: #0f172a; /* Azul pizarra muy oscuro */
+    color: #f8fafc; /* Blanco suave */
+    line-height: 1.6;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+/* Título principal */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    background: linear-gradient(to right, #38bdf8, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Contenedor de proyectos */
+section {
+    max-width: 500px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Tarjeta de proyecto individual */
+.proyecto {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.proyecto:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    border-color: #38bdf8;
+}
+
+/* Título del proyecto */
+.proyecto h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #f1f5f9;
+}
+
+/* Imagen del proyecto */
+.proyecto img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: #0f172a; /* Fondo provisional si la imagen está vacía */
+}
+
+/* Enlaces (GitHub / Ejecución) */
+.proyecto a {
+    display: inline-block;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-align: center;
+    transition: background-color 0.2s;
+}
+
+/* Estilo diferencial para simular los dos enlaces */
+.proyecto a:nth-of-type(1) {
+    background-color: #334155;
+    color: #f8fafc;
+}
+
+.proyecto a:nth-of-type(1):hover {
+    background-color: #475569;
+}
+
+.proyecto a:nth-of-type(2) {
+    background-color: #0284c7;
+    color: #ffffff;
+}
+
+.proyecto a:nth-of-type(2):hover {
+    background-color: #0369a1;
+}
